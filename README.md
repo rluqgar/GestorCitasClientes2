@@ -32,9 +32,9 @@ Java JDK 17 · MySQL 8.0 · IntelliJ IDEA o Eclipse · mysql-connector-j 8.x
 
 1. Clona el repositorio
 2. Ejecuta `bd/tienda_db.sql` en MySQL (crea las tablas e inserta datos de ejemplo)
-3. Añade `mysql-connector-j-8.x.x.jar` como librería externa en el IDE
+3. Descarga `mysql-connector-j-9.x.x.jar` desde https://dev.mysql.com/downloads/connector/j/ eligiendo **Platform Independent**, crea una carpeta `lib/` en la raíz del proyecto y copia el `.jar` dentro. Luego en IntelliJ: `File → Project Structure → Modules → Dependencies → + → JARs or Directories` y selecciona el `.jar`
 4. Abre `src/util/ConexionBD.java` y pon tu usuario y contraseña de MySQL
-5. En IntelliJ, marca `src/resources` como **Resources Root**
+5. En IntelliJ, haz clic derecho sobre la carpeta `src/resources` → `Mark Directory As → Resources Root`
 6. Ejecuta `src/app/Main.java`
 
 > Para una guía detallada paso a paso consulta la [Wiki del proyecto](../../wiki/Instalación)
