@@ -1,6 +1,12 @@
-# Sistema de Gestión de Citas y Clientes – Aplicación Java
+# 📋 Sistema de Gestión de Citas y Clientes
 
-Repositorio: https://github.com/rluqgar/GestorCitasClientes2
+> Aplicación de escritorio en Java con interfaz gráfica Swing para gestionar clientes y citas de una tienda, conectada a MySQL mediante JDBC.
+
+![Java](https://img.shields.io/badge/Java-17-orange?logo=openjdk)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql)
+![Swing](https://img.shields.io/badge/Interfaz-Swing-lightgrey)
+![Patrón](https://img.shields.io/badge/Patrón-MVC+DAO-green)
+![Licencia](https://img.shields.io/badge/Licencia-Privada-red)
 
 ---
 
@@ -39,18 +45,15 @@ Al arrancar muestra una barra superior con el logo de la empresa. Si MySQL no es
 
 ## Estructura del proyecto
 
-```
-src/
-├── model/       → Cliente.java, Cita.java
-├── dao/         → ClienteDAO.java, CitaDAO.java
-├── controller/  → ClienteController.java, CitaController.java
-├── util/        → ConexionBD.java
-├── app/         → Main.java, VentanaPrincipal.java
-└── resources/   → img/logo.png
-
-bd/
-└── tienda_db.sql
-```
+| Carpeta / Archivo | Descripción |
+|---|---|
+| `src/model/` | Entidades de dominio: Cliente.java, Cita.java |
+| `src/dao/` | Acceso a base de datos: ClienteDAO.java, CitaDAO.java |
+| `src/controller/` | Lógica de negocio: ClienteController.java, CitaController.java |
+| `src/util/` | Conexión JDBC: ConexionBD.java |
+| `src/app/` | Interfaz y arranque: Main.java, VentanaPrincipal.java |
+| `src/resources/img/` | Logo de la aplicación: logo.png |
+| `bd/` | Script SQL: tienda_db.sql |
 
 ---
 
