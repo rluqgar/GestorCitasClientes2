@@ -1,4 +1,4 @@
-# 📋 Sistema de Gestión de Citas y Clientes
+#  Sistema de Gestión de Citas y Clientes
 
 > Aplicación de escritorio en Java con interfaz gráfica Swing para gestionar clientes y citas de una tienda, conectada a MySQL mediante JDBC.
 
