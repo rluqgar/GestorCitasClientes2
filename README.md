@@ -1,74 +1,71 @@
-#  Sistema de Gestión de Citas y Clientes
+# GestorCitasClientes
 
-> Aplicación de escritorio en Java con interfaz gráfica Swing para gestionar clientes y citas de una tienda, conectada a MySQL mediante JDBC.
+**Aplicación de escritorio en Java para la gestión de clientes y citas de una tienda.**  
+Interfaz gráfica con Swing, base de datos MySQL y arquitectura MVC + DAO.
 
-![Java](https://img.shields.io/badge/Java-17-orange?logo=openjdk)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql)
-![Swing](https://img.shields.io/badge/Interfaz-Swing-lightgrey)
-![Patrón](https://img.shields.io/badge/Patrón-MVC+DAO-green)
-![Licencia](https://img.shields.io/badge/Licencia-Privada-red)
-
----
-
-## Descripción
-
-Aplicación de escritorio desarrollada en **Java** con interfaz gráfica **Swing** para gestionar clientes y citas de una tienda.
-
-Implementa operaciones **CRUD** completas conectadas a una base de datos **MySQL** mediante JDBC, siguiendo el patrón de diseño **MVC + DAO**.
-
-Al arrancar muestra una barra superior con el logo de la empresa. Si MySQL no está disponible, informa al usuario antes de abrir la ventana.
+![Java](https://img.shields.io/badge/Java-17_LTS-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![JDBC](https://img.shields.io/badge/Conexión-JDBC-lightgrey?style=flat-square)
+![Arquitectura](https://img.shields.io/badge/Arquitectura-MVC+DAO-2ea44f?style=flat-square)
+![Estado](https://img.shields.io/badge/Estado-Completado-success?style=flat-square)
 
 ---
 
-## Tecnologías
+## ¿Qué hace esta aplicación?
 
-| Herramienta | Versión |
-|---|---|
-| Java JDK | 17 LTS |
-| Java Swing | — |
-| MySQL Server | 8.0 |
-| mysql-connector-j | 8.x |
+Permite a cualquier empleado de la tienda gestionar desde una sola ventana:
+
+- El registro completo de clientes (añadir, consultar, editar y eliminar)
+- Las citas asociadas a cada cliente con fecha y descripción
+- Todo conectado en tiempo real a una base de datos MySQL local
+
+Al arrancar comprueba automáticamente si MySQL está disponible. Si no lo está, muestra un aviso antes de cerrar.
 
 ---
 
-## Instalación rápida
+## Puesta en marcha
+
+**Requisitos previos:**  
+Java JDK 17 · MySQL 8.0 · IntelliJ IDEA o Eclipse · mysql-connector-j 8.x
+
+**Pasos:**
 
 1. Clona el repositorio
-2. Ejecuta `bd/tienda_db.sql` en MySQL
-3. Añade el conector JDBC como librería externa en tu IDE
-4. Edita `src/util/ConexionBD.java` con tu usuario y contraseña de MySQL
-5. Ejecuta `src/app/Main.java`
+2. Ejecuta `bd/tienda_db.sql` en MySQL (crea las tablas e inserta datos de ejemplo)
+3. Añade `mysql-connector-j-8.x.x.jar` como librería externa en el IDE
+4. Abre `src/util/ConexionBD.java` y pon tu usuario y contraseña de MySQL
+5. En IntelliJ, marca `src/resources` como **Resources Root**
+6. Ejecuta `src/app/Main.java`
 
-> Documentación completa en la [Wiki del proyecto](../../wiki)
+> Para una guía detallada paso a paso consulta la [Wiki del proyecto](../../wiki/Instalación)
 
 ---
 
-## Estructura del proyecto
+## Estructura
 
-| Carpeta / Archivo | Descripción |
+| Paquete | Contenido |
 |---|---|
-| `src/model/` | Entidades de dominio: Cliente.java, Cita.java |
-| `src/dao/` | Acceso a base de datos: ClienteDAO.java, CitaDAO.java |
-| `src/controller/` | Lógica de negocio: ClienteController.java, CitaController.java |
-| `src/util/` | Conexión JDBC: ConexionBD.java |
-| `src/app/` | Interfaz y arranque: Main.java, VentanaPrincipal.java |
-| `src/resources/img/` | Logo de la aplicación: logo.png |
-| `bd/` | Script SQL: tienda_db.sql |
+| `model` | `Cliente.java` · `Cita.java` |
+| `dao` | `ClienteDAO.java` · `CitaDAO.java` |
+| `controller` | `ClienteController.java` · `CitaController.java` |
+| `util` | `ConexionBD.java` |
+| `app` | `Main.java` · `VentanaPrincipal.java` |
+| `resources/img` | `logo.png` |
+| `bd` | `tienda_db.sql` |
 
 ---
 
-## Documentación
+## Documentación completa
 
-Toda la documentación detallada está disponible en la **[Wiki del proyecto](../../wiki)**:
-
-- [Instalación paso a paso](../../wiki/Instalación)
-- [Arquitectura y patrones de diseño](../../wiki/Arquitectura)
-- [Base de datos](../../wiki/Base-de-Datos)
-- [Manual de usuario](../../wiki/Manual-de-Usuario)
+| Sección | Enlace |
+|---|---|
+| Instalación paso a paso | [Wiki → Instalación](../../wiki/Instalación) |
+| Arquitectura y patrones | [Wiki → Arquitectura](../../wiki/Arquitectura) |
+| Esquema de base de datos | [Wiki → Base de Datos](../../wiki/Base-de-Datos) |
+| Manual de usuario | [Wiki → Manual de Usuario](../../wiki/Manual-de-Usuario) |
 
 ---
 
 ## Autor
 
-**rluqgar**
-https://github.com/rluqgar/GestorCitasClientes2
+Desarrollado por **rluqgar** · [github.com/rluqgar](https://github.com/rluqgar)
